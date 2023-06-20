@@ -1,0 +1,5 @@
+A::=BCc|gDB
+B::=$|bCDE
+C::=DaB|ca
+D::=$|dD
+E::=gAf|c

@@ -1,0 +1,219 @@
+#include"EliminateLeftRecursion.h"
+#include <set>
+
+// 判断是否是终结符号
+bool IsTerminator(std::string ch, const std::set<std::string>& terminator)
+{
+	for (std::string item : terminator)
+	{
+		if (ch == item)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+// 判断是否是非终结符号
+bool IsNonterminal(std::string ch, std::set<std::string>& nonterminal)
+{
+	for (std::string item : nonterminal)
+	{
+		if (ch == item)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+// 获取句型的首字符
+std::string GetFirstChar(std::string sentence)
+{
+	std::string firstChar = sentence.substr(0, 1);
+	if (sentence.length() > 1 && sentence.substr(1, 1) == "'")
+	{
+		firstChar = sentence.substr(0, 2);
+	}
+	return firstChar;
+}
+
+// 求解终结符号集 和 非终结符号集
+void GetTerminator_Nonterminal(const std::vector<std::string>& grammarList, std::set<std::string>& terminator, std::set<std::string>& nonterminal)
+{
+	for (std::string oneGrammar : grammarList)
+	{
+		int len = oneGrammar.length();
+		for (int i = 0; i < len; i++)
+		{
+			if (oneGrammar[i] == '|')
+			{
+				continue;
+			}
+			else if (i < len - 1 && oneGrammar[i] == '-' && oneGrammar[i+1] == '>')
+			{
+				i++;
+				continue;
+			}
+			else if (i < len - 2 && oneGrammar[i] == ':' && oneGrammar[i + 1] == ':' && oneGrammar[i + 2] == '=')
+			{
+				i += 2;
+				continue;
+			}
+			else if (oneGrammar[i] >= 'A' && oneGrammar[i] <= 'Z')
+			{
+				if (i < len - 1 && oneGrammar[i + 1] == '\'')
+				{
+					nonterminal.insert(oneGrammar.substr(i, 1) + "'");
+					i++;
+				}
+				else
+				{
+					nonterminal.insert(oneGrammar.substr(i, 1));
+				}
+			}
+			else
+			{
+				terminator.insert(oneGrammar.substr(i, 1));
+			}
+		}
+	}
+}
+
+// 根据开始符号确定文法
+std::vector<std::string> GetGrammar(std::string firstChar, const std::vector<std::string>& grammarList)
+{
+	int grammarIndex;
+	std::string grammar;
+	std::vector<std::string> rightString;
+	for (grammarIndex = 0; grammarIndex < grammarList.size(); grammarIndex++)
+	{
+		if (firstChar == grammarList[grammarIndex].substr(0, firstChar.length()))
+		{
+			break;
+		}
+	}
+
+	std::vector<std::string> left_right = GetOneLeft_Right(grammarList[grammarIndex]);
+	// 把最左边的消除，只剩产生式的右侧
+	left_right.erase(left_right.begin());
+	return left_right;
+
+}
+
+void PrintSymbolSet(const std::set<std::string>& set)
+{
+	for (std::string item : set)
+	{
+		std::cout << item << " ";
+	}
+}
+
+void GetRightString(const std::vector<std::string>& grammarList, std::set<std::string>& rightString)
+{
+	std::vector<std::vector<std::string>> left_rightList;
+	GetLeft_RightList(grammarList, left_rightList);
+	for (std::vector<std::string> item : left_rightList)
+	{
+		for (int i = 1; i < item.size(); i++)
+		{
+			rightString.insert(item[i]);
+		}
+	}
+}
+
+// 打印产生式右侧的符号串
+void PrintRightString(const std::set<std::string>& rightString)
+{
+	for (std::string item : rightString)
+	{
+		std::cout << item << " ";
+	}
+}
+
+// 输入：句型和全部文法
+// 返回：该句型的 FIRST 集
+void GetOneFirst(std::string& sentence, std::vector<std::string>& First, const std::vector<std::string>& grammarList,
+	const std::set<std::string>& terminator, const std::set<std::string>& nonterminal)
+{
+	std::string firstChar = GetFirstChar(sentence);
+	std::string leave = sentence.substr(firstChar.length(), 1);
+	if (IsTerminator(firstChar, terminator))
+	{
+		if (firstChar == "$")
+		{
+			for (int i = 1; i < sentence.length(); i++)
+			{
+				if (IsTerminator(sentence.substr(i, 1), terminator) && sentence.substr(i, 1) != "$")
+				{
+					First.push_back(sentence.substr(i, 1));
+					return;
+				}
+			}
+		}
+		First.push_back(firstChar);
+		return;
+	}
+	else
+	{
+		std::vector<std::string> rightList = GetGrammar(firstChar, grammarList);
+		for (std::string item : rightList)
+		{
+			sentence = item + sentence.substr(firstChar.length(), sentence.length());
+			std::cout << sentence << std::endl;
+			GetOneFirst(sentence, First, grammarList, terminator, nonterminal);
+		}
+	}
+	
+}
+
+
+int main()
+{
+	std::set<std::string> terminator;
+	std::set<std::string> nonterminal;
+	std::set<std::string> rightString;
+
+	std::vector<std::string> grammarList;
+	std::vector<std::vector<std::string>> left_rightList;
+
+	std::vector<std::string> First;
+
+	ReadGrammerFile(grammarList, "code3.txt");
+
+	GetRightString(grammarList, rightString);
+
+	PrintRightString(rightString);
+
+	GetTerminator_Nonterminal(grammarList, terminator, nonterminal);
+
+	
+	std::string sentence = "BCc";
+	
+	GetOneFirst(sentence, First, grammarList, terminator, nonterminal);
+
+	std::cout << std::endl;
+
+	for (auto item : First)
+	{
+		std::cout << item << " ";
+	}
+
+	
+
+
+	return 0;
+}
+
+/*
+* 
+E::=TE'
+E'::=+TE'|$
+T::=FT'
+T'::=*FT'|$
+F::=(E)|i
+
+*/
+
+
+
