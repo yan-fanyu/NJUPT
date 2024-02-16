@@ -1,0 +1,122 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30146.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x64\\c1xx.dll -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00E7C1B0 -il C:\\Users\\27781\\AppData\\Local\\Temp\\_CL_a159d588ast -typedil -f FirstSet.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930146 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -Fox64\\Debug\\FirstSet.obj -Fdx64\\Debug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory F:\\MyLearing\\A3\\CompilationPrinciple\\EXE\\EXE2\\GrammaticalAnalysis -analyze:rulesetdirectory ;F:\\ProgramSoftware\\VS2019\\IDE\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset F:\\ProgramSoftware\\VS2019\\IDE\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\include -I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Auxiliary\\VS\\include -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\include -I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Auxiliary\\VS\\include -I F:\\ProgramSoftware\\VS2019\\IDE\\VC\\Auxiliary\\VS\\include -external:I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I F:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///F:/MyLearing/A3/CompilationPrinciple/EXE/EXE2/GrammaticalAnalysis/Utils.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b5313f50a68f1ba6acf4eb0977aab983"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/utils.h"
+          },
+          "hashes": {
+            "md5": "d12ce3f7e242fc42143f51a0227e3d18"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/symbolstringanalysis.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "d41d8cd98f00b204e9800998ecf8427e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/main.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "fedab0ee702e4fa182b6dfc599e6d3ec"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/eliminateleftrecursion.h"
+          },
+          "hashes": {
+            "md5": "88f8ff68514ff23760d6df42ecca2c04"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/firstset.h"
+          },
+          "hashes": {
+            "md5": "4d0287d48dd51dbcf8495f16d96619ca"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/followset.h"
+          },
+          "hashes": {
+            "md5": "532c96bad76e781846b192edd684cf8a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/analysistableconstructor.h"
+          },
+          "hashes": {
+            "md5": "cf9a95d52cd7df40774c57daea4c0528"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///F:/MyLearing/A3/CompilationPrinciple/EXE/EXE2/GrammaticalAnalysis/FollowSet.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "129df6cba7925299f107819931989dc0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/mylearing/a3/compilationprinciple/exe/exe2/grammaticalanalysis/firstset.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "e03946c94dde5565e6039a481f2d3b33"
+          }
+        }
+      ]
+    }
+  ]
+}

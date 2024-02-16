@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* 容器高度填满屏幕，使内容垂直居中 */
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  width: 60px; /* 设置合适的头像大小 */
+  height: 60px;
+  border-radius: 50%; /* 圆形头像 */
+  margin-right: 20px;
+}
+
+.nickname {
+  font-size: 18px;
+  margin-bottom: 5px; /* 如果需要的话 */
+}
+
+.user-id {
+  margin-top: 20px; /* ID与上面内容的间距 */
+  font-size: 16px;
+}
+
+
+.button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+}
+
+button {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.display-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.display-title {
+  margin-right: 10px;
+}
+
+.display-value {
+  color: #1c80f7;
+  cursor: pointer; /* 尽管在小程序中这不会起作用，但在开发者工具中有用 */
+}

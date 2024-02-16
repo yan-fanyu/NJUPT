@@ -1,0 +1,67 @@
+/* pages/habit/habit.wxss *//* 表格样式 */
+/* 容器样式 */
+.container {
+  padding: 10px;
+}
+
+/* 按钮组样式 */
+.button-group {
+  display: flex;
+  flex-direction: row; /* 使按钮水平排列 */
+  justify-content: space-between; /* 按钮之间平均分配空间 */
+}
+
+/* 按钮组样式 */
+.button-group button {
+  flex-grow: 1; /* 使所有按钮平均占据可用空间 */
+  margin: 0 5px; /* 为按钮添加左右外边距 */
+
+}
+
+/* 数据展示区域样式 */
+.data-display {
+  margin-top: 20px;
+}
+
+/* 单个数据项样式 */
+.data-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+
+
+.table {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%; /* 设置表格宽度为父容器的100% */
+
+}
+
+.table-row {
+  display: flex;
+  width: 100%; /* 设置行宽度为100% */
+}
+
+.table-cell {
+  flex: 1;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 5px;
+}
+
+.header .table-cell {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 例如，你想要第一列更宽一些，可以给它一个更大的flex值或者固定宽度 */
+.table-cell:first-child {
+  flex: 0.5; /* 第一列占据更多的空间 */
+  /* 或者设置固定宽度 */
+  /* width: 200px; */
+}
+/* 其他样式 */
+/* ... */

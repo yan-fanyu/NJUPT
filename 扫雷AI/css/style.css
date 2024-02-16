@@ -1,0 +1,158 @@
+
+.btn {
+    margin: 8px auto;
+    flex-shrink: 0;
+    width: 120px;
+    height: 40px;
+    font-size: large;
+    text-align: center;
+    border-style: groove double;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #7de3c8;
+    font-style: normal;
+    font-weight: bold;
+    background-color:rgb(202, 180, 244);
+    color: rgb(249, 247, 252);
+}
+
+
+
+.circle {
+    border-radius: 64px;
+    background: #7de3c8;
+    color:#7de3c8
+}
+
+#bar {
+    text-align: center;  /*文本居中*/
+    margin-bottom:20px;  /*设置外边距*/
+}
+
+.bar {
+    height: 25px;             /*设置button按钮的长宽*/
+    width: 150px; 
+    line-height: 25px;        /*设置行高*/
+    display: inline-block;    /*设置为行内块元素*/
+    border: solid 1px #7de; /*边框属性设置*/
+    margin-left: 20px;        /*左右边距*/
+    margin-right: 20px;
+    color:aqua;             /*设置字体颜色*/
+}
+#b{
+    text-align: center;
+    margin-bottom: 20px;
+    border: solid 1px #7de;
+    border-style: double;
+    border-width: 3px;
+    background: rgb(195, 224, 234);
+    color:rgb(58, 96, 223);
+    font-style: normal;
+    font-size: medium;
+}
+#c{
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 15px;
+    background: rgb(201, 242, 250);
+}
+#grid {               /*整体说明*/
+    margin: auto;     /*各边距为默认*/
+}
+
+.blocks {             /*各个小格子的设计*/
+    width: 25px;       /*格子为25*25*/
+    height: 25px;
+    line-height: 25px;
+    display: block;     /*将元素设置为块元素*/
+    text-align: center; /*文本居中*/
+    user-select: none;
+    cursor: pointer;            /*光标显示为指针*/
+    background: rgb(231, 226, 240);  /*背景颜色*/
+    float: left;
+    border: 0px #fff solid;    /*边框形式*/
+    color:rgb(236, 52, 35);    /*文本颜色*/
+}
+
+.blocks:hover {               /*光标区域颜色*/
+    background: #0af;  
+}
+.blocks img{                  /*显示为图片设置*/
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+}
+.blocks n{                   /*第一次踩到雷标设置*/
+    color:#141414;
+    height: 30px;            
+    width: 30px;
+    font-style: normal;      /*字体类型*/
+    font-weight: bold;
+    font-size:larger;
+}
+.blocks num1{
+    color:rgb(17, 101, 154);
+    background: rgb(201, 242, 250);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+.blocks num2{
+    color:#19CAAD;
+    background: rgb(240, 244, 225);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+.blocks num3{
+    color:#F4606C;
+    background: rgb(245, 230, 244);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+.blocks num4{
+    color:rgb(173,101,152);
+    background: rgb(239, 222, 236);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+.blocks num5{
+    color:rgb(248, 29, 157);
+    background: rgb(247, 216, 237);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+.blocks num6{
+    color:rgb(224,160,158);
+    background: rgb(211, 233, 238);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.blocks num7{
+    color:black;
+    background: rgb(160, 192, 198);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+.blocks num8{
+    color:black;
+    background: rgb(201, 242, 250);
+    height: 30px;
+    width: 30px;
+    font-style: normal;
+    font-weight: bold;
+}

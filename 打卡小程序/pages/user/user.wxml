@@ -1,0 +1,9 @@
+<view class="container">
+  <image bindtap="loginUser" class="avatar" src="{{user_image || '/images/default_user_image.png'}}"></image>
+  <text bindtap="loginUser" class="nickname">{{user_name || '未登录'}}</text>
+
+  <view class="button-group">
+    <button bindtap="goToUserInfo">个人信息</button>
+    <button bindtap="logout">退出</button>
+  </view>
+</view>

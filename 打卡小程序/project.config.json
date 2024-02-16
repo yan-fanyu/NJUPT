@@ -1,0 +1,30 @@
+{
+  "appid": "wx6ecb15766000204f",
+  "compileType": "miniprogram",
+  "libVersion": "3.1.5",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "cloudfunctionRoot": "cloud/",
+  "setting": {
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>扫雷</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body ondragstart='return false' oncontextmenu='self.event.returnValue=false'>
+
+<div id="b"><span>剩余雷数：<label id='count'>0</label></span></div>
+
+<div id='bar'>
+    
+    <span> <button id="AI" class='btn rect'>AI</button> </span>
+    <span> <button id="OneGame" class='btn rect' >ALL</button> </span>
+    <span> <button id="Test10W" class='btn rect'>One Game</button> </span>
+    <span> <button id="Restart" class='btn rect'>Restart</button> </span>
+
+
+    <span> <input id="WinOrLose" type="text" class='btn rect' value="WIN or Lose"></span>
+    <span> <input id="WinRate" type="text" class='btn rect' value="Win Rate"></span>
+
+
+
+</div>
+<table id='grid'></table>
+
+<script type="text/javascript" src="js/AutoSweeper.js"></script>''
+<script type="text/javascript" src="js/Game.js"></script>
+<script type="text/javascript" src="js/GlobalValue.js"></script>
+<script type="text/javascript" src="js/Main.js"></script>
+
+</body>
+
+</html>

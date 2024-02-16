@@ -1,0 +1,54 @@
+.calendar-scroll-view {
+  white-space: nowrap;
+  overflow-x: auto;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.week-container {
+  display: inline-block; /* 使得每个容器水平排列 */
+  width: 80px; /* 根据实际需要设置宽度 */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main{
+  position: relative;
+
+  border-bottom: 1px solid black;
+}
+
+.bottom-right-icon {
+  position: absolute;
+  right: 10px; /* 根据实际情况调整 */
+  bottom: 10px; /* 根据实际情况调整 */
+  width: 30px; /* 图标的大小 */
+  height: 30px; /* 图标的大小 */
+}
+
+.habit-info-container {
+  margin-top: 20px;
+}
+
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.habit-item text {
+  flex-grow: 1;
+}
+
+.habit-item button {
+  margin-left: 10px;
+}
+
+.selected-day,
+.selected-date {
+  background-color: #abcdef; /* 选择一个明显的颜色来标记选中的日期 */
+  color: white;
+}

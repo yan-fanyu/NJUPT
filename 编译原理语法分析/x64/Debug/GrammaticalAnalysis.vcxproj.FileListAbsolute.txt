@@ -1,0 +1,2 @@
+F:\MyLearing\A3\CompilationPrinciple\EXE\EXE2\GrammaticalAnalysis\x64\Debug\GrammaticalAnalysis.exe
+F:\GrammaticalAnalysis\x64\Debug\GrammaticalAnalysis.exe

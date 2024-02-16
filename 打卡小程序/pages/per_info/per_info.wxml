@@ -1,0 +1,27 @@
+<view class="container">
+  <!-- 头像和昵称在同一行 -->
+  <view class="profile-section">
+    <image class="avatar" src="{{user_image}}"></image>
+    <text class="nickname">{{user_name}}</text>
+  </view>
+  <text class="user-id">ID: {{user_id}}</text>
+  
+ <!-- 手机号显示 -->
+<view class="display-section">
+  <text class="display-title">手机号：</text>
+  <text class="display-value" bindtap="editPhone">{{user_phone || '点击设置'}}</text>
+</view>
+
+<!-- 电子邮箱显示 -->
+<view class="display-section">
+  <text class="display-title">电子邮件：</text>
+  <text class="display-value" bindtap="editEmail">{{user_email || '点击设置'}}</text>
+</view>
+
+
+  <!-- 按钮 -->
+  <view class="button-section">
+    <button bindtap="saveUserInfo">保存</button>
+    <button bindtap="cancelEdit">取消</button>
+  </view>
+</view>

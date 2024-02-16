@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/user",
+    "pages/board/board",
+    "pages/add/add",
+    "pages/habit/habit",
+    "pages/per_info/per_info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FF0000"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_click.png"
+      },
+      {
+        "pagePath": "pages/habit/habit",
+        "text": "习惯",
+        "iconPath": "images/habit.png",
+        "selectedIconPath": "images/habit_click.png"
+      },
+      {
+        "pagePath": "pages/board/board",
+        "text": "排行榜",
+        "iconPath": "images/board.png",
+        "selectedIconPath": "images/board_click.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_click.png"
+      }
+    ]
+  }
+}

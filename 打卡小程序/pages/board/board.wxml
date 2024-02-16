@@ -1,0 +1,10 @@
+<!--pages/board/board.wxml-->
+
+<view class="clock-ins-container">
+  <block wx:for="{{clockIns}}" wx:for-item="clockIn" wx:key="unique">
+    <view class="clock-in-item">
+      <text>打卡名：{{clockIn.clo_name}}</text>
+      <text>打卡次数：{{clockIn.clo_count}}</text>
+    </view>
+  </block>
+</view>

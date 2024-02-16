@@ -1,0 +1,57 @@
+<view class="picker-container">
+  <picker mode="selector" range="{{habitList}}" range-key="hab_name" bindchange="bindPickerChange">
+  <view class="picker">
+    选择要打卡的习惯名：{{selectedSlot || '请选择你要打卡的习惯'}}
+  </view>
+</picker>
+  <text class="link" bindtap="showModal">还没有习惯？请添加</text>
+</view>
+<view class="time-container">
+    <view class="target-time">目标时间</view>
+    <view class="start-end-container">
+        <picker mode="date" value="{{startDate}}" start="1900-01-01" end="2999-12-31" bindchange="onStartDateChange">
+            <view class="start-time">
+                开始时间: {{startDate || '请选择日期'}}
+            </view>
+        </picker>
+        <picker mode="date" value="{{endDate}}" start="1900-01-01" end="2999-12-31" bindchange="onEndDateChange">
+            <view class="end-time">
+                截止时间: {{endDate || '请选择日期'}}
+            </view>
+        </picker>
+    </view>
+</view>
+
+<view class="deadline-container">
+  <view class="deadline-text">每天截止时间</view>
+  <picker mode="time" value="{{deadline}}" bindchange="onDeadlineChange" class="deadline-picker">
+    <view class="deadline-date">{{deadline || '请选择时间'}}</view>
+  </picker>
+</view>
+
+
+<view class="button-group">
+  <button bindtap="confirmAction">确定</button>
+  <button bindtap="cancelAction">取消</button>
+</view>
+
+
+<!-- 自定义模态弹窗结构 -->
+<view class="modal-mask" hidden="{{!modalVisible}}">
+  <view class="modal-dialog">
+    <view class="modal-header">
+      添加习惯
+    </view>
+    <form bindsubmit="formSubmit" class="modal-content">
+      <view class="modal-body">
+        <!-- 表单内容，例如输入框 -->
+        <input name="inputField" class="input-field" type="text" placeholder="请输入习惯名字" />
+        <!-- 可以添加更多表单字段 -->
+      </view>
+      <view class="modal-footer">
+        <button formType="submit" class="submit-btn">提交</button>
+        <button bindtap="hideModal" class="cancel-btn">取消</button>
+      </view>
+    </form>
+  </view>
+</view>

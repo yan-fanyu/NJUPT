@@ -1,0 +1,59 @@
+<view class="container">
+  <!-- 操作按钮 -->
+  <view class="button-group">
+    <button bindtap="showAddModal">增加</button>
+    <button bindtap="showDeleteOptions">删除</button>
+    <button bindtap="showUpdateModal">修改</button>
+    <button bindtap="queryHabits">查询</button>
+  </view>
+
+  <!-- 数据表格 -->
+  <view class="table">
+    <!-- 表头 -->
+    <view class="table-row header">
+      <view class="table-cell">习惯</view>
+      <view class="table-cell" wx:if="{{showDeleteCheckbox}}">操作</view>
+    </view>
+     
+    
+    <!-- 表格数据行 -->
+     <block wx:for="{{dataList}}" wx:key="unique">
+      <view class="table-row">
+        <view class="table-cell">{{item.hab_name}}</view>
+        <view class="table-cell" wx:if="{{showDeleteCheckbox}}">
+          <checkbox value="{{item.hab_name}}" checked="{{item.checked}}" bindchange="checkboxChange">选择</checkbox>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{showDeleteCheckbox}}" class="delete-confirm-button">
+      <button bindtap="confirmDelete">确定</button>
+    </view>
+  </view>
+
+   <!-- 添加习惯的弹窗 -->
+   <modal hidden="{{!showAddModal}}" bindcancel="hideAddModal" title="添加习惯">
+    <form bindsubmit="handleAddHabit">
+      <input type="text" placeholder="输入习惯名称" name="hab_name"/>
+      <button formType="submit">提交</button>
+    </form>
+  </modal>
+
+  <!-- 修改习惯的弹窗 -->
+   <modal hidden="{{!showUpdateModal}}" bindcancel="hideUpdateModal" title="修改习惯">
+      <picker mode="selector" range="{{dataList}}" range-key="hab_name" bindchange="pickerChange">
+      <view>当前选中: {{currentHabit.hab_name}}</view>
+    </picker>
+    <input type="text" placeholder="输入新的习惯名称" bindinput="inputChange"/>
+    <button bindtap="updateHabit">修改</button>
+  </modal>
+
+    <!-- 查询习惯的弹窗 -->
+    <modal hidden="{{!showQueryModal}}" bindcancel="hideQueryModal" title="查询习惯">
+    <form bindsubmit="handleQueryHabit">
+      <input type="text" placeholder="输入习惯名称" name="hab_name"/>
+      <button formType="submit">查询</button>
+    </form>
+  </modal>
+</view>
+
+

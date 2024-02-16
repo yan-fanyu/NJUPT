@@ -1,0 +1,20 @@
+<scroll-view scroll-x="true" class="calendar-scroll-view">
+  <view class="week-container" wx:for="{{weekDates}}" wx:key="weekDay" bindtap="onDayClick" data-date="{{item.date}}">
+    <view class="day-of-week {{selectedDate === item.date ? 'selected-day' : ''}}">{{item.weekDay}}</view>
+    <view class="date-of-week {{selectedDate === item.date ? 'selected-date' : ''}}">{{item.date}}</view>
+  
+  </view>
+</scroll-view>
+<view class="main" style="height:{{scrollViewHeight}}px;">
+  <image src="/images/add.png" class="bottom-right-icon"  bindtap="onAddIconClick"></image>
+
+  <view wx:if="{{selectedDayHabits.length > 0}}" class="habit-info-container">
+    <block wx:for="{{selectedDayHabits}}" wx:key="clo_id" >
+      <view class="habit-item">
+        <text>{{item.clo_name}}</text>
+        <button bindtap="onPunchCard" data-clo_id="{{item.clo_id}}" data-clo_name="{{item.clo_name}}">{{item.punched ? '已打卡' : '未打卡'}}</button>
+      </view>
+    </block>
+  </view>
+
+</view>

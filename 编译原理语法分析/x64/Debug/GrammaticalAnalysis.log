@@ -1,0 +1,19 @@
+﻿  AnalysisTableConstructor.cpp
+  EliminateLeftRecursion.cpp
+F:\GrammaticalAnalysis\EliminateLeftRecursion.cpp(121,61): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  FirstSet.cpp
+  FollowSet.cpp
+F:\GrammaticalAnalysis\FollowSet.cpp(35,47): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
+F:\GrammaticalAnalysis\FollowSet.cpp(114,33): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\GrammaticalAnalysis\FollowSet.cpp(118,39): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+  main.cpp
+  StringAnalysis.cpp
+F:\GrammaticalAnalysis\StringAnalysis.cpp(9,28): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\GrammaticalAnalysis\StringAnalysis.cpp(20,2): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\GrammaticalAnalysis\StringAnalysis.cpp(31,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\GrammaticalAnalysis\StringAnalysis.cpp(37,2): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\GrammaticalAnalysis\StringAnalysis.cpp(49,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Utils.cpp
+F:\GrammaticalAnalysis\Utils.cpp(123,32): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码...
+  GrammaticalAnalysis.vcxproj -> F:\GrammaticalAnalysis\x64\Debug\GrammaticalAnalysis.exe
